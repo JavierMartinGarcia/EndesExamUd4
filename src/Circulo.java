@@ -1,16 +1,16 @@
-public class Circulo {
+public class Circulo implements MetodosGeometricos{
 
     private double radio;
 
     protected Circulo(double radio) {
         this.setRadio(radio);
     }
-
-    protected double calcularArea() {
+    @Override
+    public double calcularArea() {
         return 3.1416 * getRadio() * getRadio();
     }
-
-    protected double calcularPerimetro() {
+    @Override
+    public double calcularPerimetro() {
         return 2 * 3.1416 * getRadio();
     }
 

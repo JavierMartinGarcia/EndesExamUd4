@@ -1,17 +1,15 @@
-public class Rectangulo {
-
-    private double ancho;
-    private double alto;
+public class Rectangulo extends FigurasSimples implements MetodosGeometricos {
 
     protected Rectangulo(double ancho, double alto) {
-        this.ancho = ancho;
-        this.alto = alto;
+        super(ancho, alto);
     }
 
+    @Override
     public double calcularArea() {
         return getAncho() * getAlto();
     }
 
+    @Override
     public double calcularPerimetro() {
         return 2 * getAncho() + 2 * getAlto();
     }
@@ -20,11 +18,4 @@ public class Rectangulo {
         System.out.println("Dibujando rectangulo " + getAncho() + "x" + getAlto());
     }
 
-    public double getAncho() {
-        return ancho;
-    }
-
-    public double getAlto() {
-        return alto;
-    }
 }

@@ -1,23 +1,20 @@
-public class Triangulo {
-
-    private double base;
-    private double altura;
+public class Triangulo extends FigurasSimples implements MetodosGeometricos{
     private double lado1;
     private double lado2;
     private double lado3;
 
     protected Triangulo(double base, double altura, double l1, double l2, double l3) {
-        this.base = base;
-        this.altura = altura;
+        super(base,altura);
         this.lado1 = l1;
         this.lado2 = l2;
         this.lado3 = l3;
     }
 
+    @Override
     public double calcularArea() {
         return (getBase() * getAltura()) / 2;
     }
-
+    @Override
     public double calcularPerimetro() {
         return getLado1() + getLado2() + getLado3();
     }
@@ -27,11 +24,11 @@ public class Triangulo {
     }
 
     public double getBase() {
-        return base;
+        return super.getAncho();
     }
 
     public double getAltura() {
-        return altura;
+        return super.getAlto();
     }
 
     public double getLado1() {
