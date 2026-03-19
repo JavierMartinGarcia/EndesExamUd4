@@ -1,22 +1,30 @@
 public class Rectangulo {
 
-    public double ancho;
-    public double alto;
+    private double ancho;
+    private double alto;
 
-    public Rectangulo(double ancho, double alto) {
+    protected Rectangulo(double ancho, double alto) {
         this.ancho = ancho;
         this.alto = alto;
     }
 
     public double calcularArea() {
-        return ancho * alto;
+        return getAncho() * getAlto();
     }
 
     public double calcularPerimetro() {
-        return 2 * ancho + 2 * alto;
+        return 2 * getAncho() + 2 * getAlto();
     }
 
     public void dibujar() {
-        System.out.println("Dibujando rectangulo " + ancho + "x" + alto);
+        System.out.println("Dibujando rectangulo " + getAncho() + "x" + getAlto());
+    }
+
+    public double getAncho() {
+        return ancho;
+    }
+
+    public double getAlto() {
+        return alto;
     }
 }

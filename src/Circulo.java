@@ -1,20 +1,32 @@
 public class Circulo {
 
-    public double radio;
+    private double radio;
 
-    public Circulo(double radio) {
-        this.radio = radio;
+    protected Circulo(double radio) {
+        this.setRadio(radio);
     }
 
-    public double calcularArea() {
-        return 3.1416 * radio * radio;
+    protected double calcularArea() {
+        return 3.1416 * getRadio() * getRadio();
     }
 
-    public double calcularPerimetro() {
-        return 2 * 3.1416 * radio;
+    protected double calcularPerimetro() {
+        return 2 * 3.1416 * getRadio();
     }
 
     public void dibujar() {
-        System.out.println("Dibujando circulo de radio " + radio);
+        System.out.println("Dibujando circulo de radio " + getRadio());
+    }
+
+    public double getRadio() {
+        return radio;
+    }
+
+    protected void setRadio(double radio) {
+        if (radio <= 0){
+            throw new IllegalArgumentException("Radio introducido no válido");
+        } else {
+            this.radio = radio;
+        }
     }
 }
