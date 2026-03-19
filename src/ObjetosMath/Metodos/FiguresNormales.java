@@ -1,8 +1,10 @@
-public class FigurasSimples {
+package ObjetosMath.Metodos;
+
+public abstract class FiguresNormales {
     protected double ancho;
     protected double alto;
 
-    public FigurasSimples(double ancho, double alto) {
+    public FiguresNormales(double ancho, double alto) {
         this.ancho = ancho;
         this.alto = alto;
     }

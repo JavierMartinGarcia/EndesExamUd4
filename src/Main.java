@@ -1,3 +1,7 @@
+import ObjetosMath.Figuras.Circulo;
+import ObjetosMath.Figuras.Triangulo;
+import ObjetosMath.Gestor.GestorFiguras;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -5,11 +9,10 @@ public class Main {
         GestorFiguras gestor = new GestorFiguras();
 
         Circulo c = new Circulo(5);
-        Rectangulo r = new Rectangulo(4, 6);
         Triangulo t = new Triangulo(3, 4, 3, 4, 5);
 
         gestor.agregarFigura(c);
-        gestor.agregarFigura(r);
+        gestor.agregarFigura(4,6);
         gestor.agregarFigura(t);
 
         System.out.println("---- AREAS ----");
