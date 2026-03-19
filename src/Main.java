@@ -3,7 +3,10 @@ import ObjetosMath.Figuras.Triangulo;
 import ObjetosMath.Gestor.GestorFiguras;
 
 public class Main {
-
+/**
+ * @author Javier Martín García
+ * Esta clase se creó más que nada para demostrar que el código funciona
+ * */
     public static void main(String[] args) {
 
         GestorFiguras gestor = new GestorFiguras();

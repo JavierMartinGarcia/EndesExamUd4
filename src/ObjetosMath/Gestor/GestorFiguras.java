@@ -9,7 +9,10 @@ import java.util.ArrayList;
 public class GestorFiguras {
 
     private ArrayList<Object> figuras;
-
+    /**
+     * @serialData figuras
+     * Arraylist encargado de guardar los distintos tipos de figuras
+     * */
     public GestorFiguras() {
         setFiguras(new ArrayList<>());
     }
@@ -25,9 +28,11 @@ public class GestorFiguras {
     }
     public void agregarFigura(double base, double altura, double l1, double l2, double l3) {
         getFiguras().add(new Triangulo(base, altura, l1, l2, l3));
-
     }
-
+    /**
+     * @apiNote agregarFigura()
+     * Tiene multiples posibilidades en las que se pueda introducir los datos
+     * */
     public void mostrarAreas() {
 
         for (Object f : getFiguras()) {

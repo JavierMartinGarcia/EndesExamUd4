@@ -4,7 +4,14 @@ import ObjetosMath.Metodos.FiguresNormales;
 import ObjetosMath.Metodos.MetodosGeometricos;
 
 public class Rectangulo extends FiguresNormales implements MetodosGeometricos {
-
+    /**
+     * @see FiguresNormales
+     * @since Versión bad smell
+     * @param ancho
+     * Se trata del ancho del rectángulo
+     * @param alto
+     * Se trata del alto del rectángulo
+     * */
     public Rectangulo(double ancho, double alto) {
         super(ancho, alto);
     }
